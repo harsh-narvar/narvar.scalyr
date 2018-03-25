@@ -1,0 +1,24 @@
+---
+- name: install the SCALYR rpm package and create a repo
+  yum_repository:
+   baseurl: "{{ scalyr_yum_repo }}"
+   enabled: yes
+   state: present
+   gpgcheck: no
+
+- name: install SCALYR rpm package
+  yum:
+    name: scalyr-agent-2-2.0.30-1.noarch.rpm
+    state: present
+    disable_gpg_check: yes
+
+- name: install SCALYR repo
+  yum:
+    name: scalyr-repo
+    state: present
+
+
+- name: install SCALYR repo
+  yum:
+    name: scalyr-agent-2
+    state: present

@@ -1,0 +1,20 @@
+---
+- name: get the deb package
+  get_url:
+    url: {{ scalyr_deb_url}}
+    dest: /tmp/scalyr-agent-2_2.0.30_all.deb
+    mode: 0700
+
+- name: install the .deb package
+  apt:
+    deb: /tmp/scalyr-agent-2_2.0.30_all.deb
+
+- name: install scalyr Agent
+  apt:
+    name: scalyr-agent-2
+    state: present
+
+- name: install scalyr repo
+  apt:
+    name: scalyr-repo
+    state: present

@@ -1,0 +1,8 @@
+---
+- name: copy custom config file
+  template:
+    src: agent.json.j2
+    dest: /etc/scalyr-agent-2/agent.json"
+    mode: 0644
+  notify:
+  - start scalyr

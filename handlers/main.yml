@@ -1,0 +1,5 @@
+- name: start scalyr
+  service:
+    name: scalyr-agent-2
+    state: start
+  when: scalyr_enabled

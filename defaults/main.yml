@@ -1,0 +1,8 @@
+---
+scalyr_yum_repo: "https://www.scalyr.com/scalyr-repo/stable/latest/scalyr-agent-2-2.0.30-1.noarch.rpm"
+
+scalyr_enabled: yes
+
+scalyr_api_key: " Narvar API Key "
+
+scalyr_deb_url: "https://www.scalyr.com/scalyr-repo/stable/latest/scalyr-agent-2_2.0.30_all.deb"
